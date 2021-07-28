@@ -16,8 +16,9 @@ srcBtn.addEventListener('click', function() {
             const descriptionValue = data['weather'][0]['description'];
 
             cityName.innerHTML = nameValue;
-            temperature.innerHTML = temperatureValue;
+            temperature.innerHTML = temperatureValue - 273.15;
             description.innerHTML = descriptionValue;
         })
-        .catch(err => console.log("wrong city"))
+
+    .catch(err => console.log("wrong city"));
 })
